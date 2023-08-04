@@ -1,0 +1,30 @@
+@use 'variables';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: variables.$VeryDarkBlue;
+    color: variables.$white;
+    font-family: variables.$ff;
+    font-size: variables.$fs;
+}
+
+main {
+    width: 375px;
+    height: 100vh;
+    margin: 80px auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 25px;
+
+    @media #{variables.$desktop} {
+        width: 1110px;
+        height: 518px;
+        margin: 252px auto;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

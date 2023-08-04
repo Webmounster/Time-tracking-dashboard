@@ -1,0 +1,95 @@
+@use 'variables';
+@mixin card-exterior($color, $image) {
+    width: 325px;
+    height: 160px;
+    border-radius: 18px;
+    overflow: hidden;
+    background-color: $color;
+    background-image: $image;
+    background-size: 20%;
+    background-position: right 15px top;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+
+    @media #{variables.$desktop} {
+        width: 255px;
+        height: 245px;
+        background-size: 30%;
+    }
+}
+
+@mixin card() {
+    width: 100%;
+    height: 120px;
+    border-radius: 18px;
+    padding: 0 25px;
+    background-color: variables.$DarkBlue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+
+    @media #{variables.$desktop} {
+        height: 200px;
+        justify-content: space-around;
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(39, 44, 105);
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__title {
+            font-size: variables.$fs;
+        }
+
+        &__img {
+            padding: 0 10px;
+            cursor: pointer;
+
+            &:hover {
+                filter: brightness(100);
+            }
+            img {
+                width: 21px;
+                height: 5px;
+            }
+        }
+    }
+
+    .data {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media #{variables.$desktop} {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 5px;
+            // height: 355px;
+            // grid-template-columns: 1fr;
+            // align-items: flex-start;
+        }
+
+        .current {
+            font-size: 2rem;
+
+            @media #{variables.$desktop} {
+                font-size: 2rem * 1.5;
+            }
+        }
+        .previous {
+            font-size: 0.7rem;
+            color: variables.$DesaturatedBlue;
+            font-weight: variables.$fw300;
+        }
+    }
+}

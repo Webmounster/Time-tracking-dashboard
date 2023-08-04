@@ -1,0 +1,116 @@
+@use 'variables';
+@use 'mixin';
+.bg-work {
+    @include mixin.card-exterior(variables.$LightRed, url('../images/icon-work.svg'));
+}
+.bg-play {
+    @include mixin.card-exterior(variables.$SoftBlue, url('../images/icon-play.svg'));
+}
+.bg-study {
+    @include mixin.card-exterior(variables.$LightRed, url('../images/icon-study.svg'));
+}
+.bg-exercise {
+    @include mixin.card-exterior(variables.$LimeGreen, url('../images/icon-exercise.svg'));
+}
+.bg-social {
+    @include mixin.card-exterior(variables.$Violet, url('../images//icon-social.svg'));
+}
+.bg-selfCare {
+    @include mixin.card-exterior(variables.$SoftOrange, url('../images//icon-self-care.svg'));
+}
+
+.card-perfil {
+    width: 325px;
+    height: 198px;
+    background-color: variables.$DarkBlue;
+    border-radius: 18px;
+    overflow: hidden;
+
+    @media #{variables.$desktop} {
+        width: 255px;
+        height: 517px;
+
+        grid-row: 1/3;
+    }
+
+    .perfil {
+        height: 132px;
+        background-color: variables.$Blue;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        align-items: center;
+        border-radius: 18px;
+
+        @media #{variables.$desktop} {
+            height: 355px;
+            grid-template-columns: 1fr;
+            align-items: flex-start;
+            padding: 35px 25px;
+        }
+
+        &__img {
+            width: 60%;
+            border-radius: 50%;
+            border: 3px solid white;
+            justify-self: center;
+
+            @media #{variables.$desktop} {
+                width: 40%;
+                border-radius: 50%;
+                border: 3px solid white;
+                justify-self: flex-start;
+            }
+        }
+        &__report {
+            font-weight: variables.$fw300;
+            color: variables.$PaleBlue;
+            font-size: 0.9rem;
+        }
+        &__name {
+            font-weight: variables.$fw300;
+            font-size: 1.5rem;
+
+            @media #{variables.$desktop} {
+                font-size: 1.5rem * 1.5;
+            }
+        }
+    }
+    .nav {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 25px;
+        font-weight: variables.$fw300;
+        list-style-type: none;
+
+        @media #{variables.$desktop} {
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 25px;
+            margin-left: 25px;
+        }
+
+        .nav-element {
+            color: variables.$DesaturatedBlue;
+            cursor: pointer;
+
+            &.active,
+            &:hover {
+                color: variables.$white;
+            }
+        }
+    }
+}
+
+.card {
+    @include mixin.card;
+    transition: transform 2500ms, opacity 750ms ease-in-out;
+}
+
+.cambio {
+    transform: translateY(100px);
+    opacity: 0.5;
+
+    @media #{variables.$desktop} {
+        transform: translateY(200px);
+    }
+}

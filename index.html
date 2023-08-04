@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/index.css">
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+
+    <div class="card-perfil">
+      <div class="perfil">
+        <img class="perfil__img" src="./images/image-jeremy.png" alt="Imagen Usuario">
+        <div class="perfil__data">
+          <p class="perfil__report">Report for</p>
+          <p class="perfil__name">Jeremy Robson</p>
+        </div>
+      </div>
+
+      <nav class="navbar">
+        <ul class="nav">
+          <li class="nav-element" data-id="0">Daily</li>
+          <li class="nav-element active" data-id="1">Weekly</li>
+          <li class="nav-element" data-id="2">Monthly</li>
+        </ul>
+
+      </nav>
+    </div>
+
+
+
+    <div class="bg-work">
+      <div class="card card-work">
+        <div class="header">
+          <span class="header__title">Work</span>
+          <div class="header__img"><img src="./images/icon-ellipsis.svg" alt="icon ellipsis"></div>
+        </div>
+        <div class="data data-work">
+          <span class="current data-work__current">32hrs</span>
+          <span class="previous data-work__previous">Last Week - 36hrs</span>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="bg-play">
+      <div class="card card-play">
+        <div class="header">
+          <span class="header__title"> Play</span>
+          <div class="header__img"><img src="./images/icon-ellipsis.svg" alt="icon ellipsis"></div>
+        </div>
+
+        <div class="data data-play">
+
+          <span class="current data-play__current">10hrs</span>
+          <span class="previous data-play__previous">Last Week - 8hrs </span>
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="bg-study">
+      <div class="card card-study">
+        <div class="header">
+          <span class="header__title">Study</span>
+          <div class="header__img"><img src="./images/icon-ellipsis.svg" alt="icon ellipsis"></div>
+        </div>
+
+        <div class="data data-study">
+
+          <span class="current data-study__current">4hrs</span>
+          <span class="previous data-study__previous">Last Week - 7hrs</span>
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="bg-exercise">
+      <div class="card card-exercise">
+        <div class="header">
+          <span class="header__title">Exercise</span>
+          <div class="header__img"><img src="./images/icon-ellipsis.svg" alt="icon ellipsis"></div>
+        </div>
+
+        <div class="data data-exercise">
+
+          <span class="current data-exercise__current">4hrs</span>
+          <span class="previous data-exercise__previous">Last Week - 5hrs</span>
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="bg-social">
+      <div class="card card-social">
+        <div class="header">
+          <span class="header__title">Social</span>
+          <div class="header__img"><img src="./images/icon-ellipsis.svg" alt="icon ellipsis"></div>
+        </div>
+
+        <div class="data data-social">
+
+          <span class="current data-social__current">5hrs</span>
+          <span class="previous data-social__previous">Last Week - 10hrs</span>
+
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <div class="bg-selfCare">
+      <div class="card card-selfCare">
+        <div class="header">
+          <span class="header__title">Self Care</span>
+          <div class="header__img"><img src="./images/icon-ellipsis.svg" alt="icon ellipsis"></div>
+        </div>
+
+        <div class="data data-selfCare">
+
+          <span class="current data-selfCare__current">2hrs</span>
+          <span class="previous data-selfCare__previous"> Last Week - 2hrs</span>
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
